@@ -1,17 +1,97 @@
-:root {
-    font-size: 16px;
-    --carousel-quantity: 3;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-$primary:#1c1c1e;
-$primaryLight: #232325;
+html {
+    scroll-behavior: smooth;
+}
 
-$secondary: #9f554a;
-$secondaryLight: #d9c7bd;
+body {
+    background-color: $primaryLight;
+}
 
-$tertiary:#657575;
-$tertiaryLight: #677576;
+img {
+    display: none;
+    width: 100%;
+}
 
-$carouselBtnSize: 55px;
-$burgerBtnSize: 2.5rem;
-$navHeight: 5.2rem;
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: $secondaryLight;
+    font-weight: 400;
+    text-align: center;
+}
+
+h1 {
+    font-family: TrendRoughSansOne, sans-serif;
+}
+
+.heading-l {
+    font-size: 3.1rem;
+}
+
+.heading-m {
+    font-size: 2.75rem;
+}
+
+.heading-s {
+    font-size: 50px;
+}
+
+.paragraph-l,
+.paragraph-xs {
+    font-family: Factoria-Medium, sans-serif;
+}
+
+.paragraph-m,
+.paragraph-s {
+    font-family: Factoria-Book, sans-serif;
+}
+
+.paragraph-l {
+    font-size: 1.88rem;
+    text-transform: capitalize;
+}
+
+.paragraph-m {
+    font-size: 1.3rem;
+}
+
+.paragraph-s {
+    font-size: 1.13rem;
+}
+
+.paragraph-xs {
+    font-size: 1rem;
+}
+
+.primary-heading-font {
+    font-family: TrendRoughSansOne, sans-serif;
+}
+
+.secondary-heading-font {
+    font-family: TrendRoughSansFive, sans-serif;
+}
+
+.tertiary-heading-font {
+    font-family: HanleyRoughScript, sans-serif;
+    text-transform: capitalize;
+}
+
+.primary-heading-font,
+.secondary-heading-font,
+h1 {
+    text-transform: uppercase;
+}
