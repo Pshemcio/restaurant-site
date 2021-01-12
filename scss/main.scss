@@ -1,5 +1,7 @@
+@import 'settings/fonts';
+@import 'settings/reset';
 @import 'settings/breakpoints';
-@import 'settings/variables';
+@import 'settings/base';
 @import 'settings/mixins';
 
 @import 'components/buttons';

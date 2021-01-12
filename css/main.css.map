@@ -1,10 +1,12 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACAA,UAAU;EACN,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,iCAAiC;;;AAG1C,UAAU;EACN,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,iCAAiC;;;AAG1C,UAAU;EACN,WAAW,EAAE,eAAe;EAC5B,GAAG,EAAE,mCAAmC;;;AAG5C,UAAU;EACN,WAAW,EAAE,iBAAiB;EAC9B,GAAG,EAAE,sCAAsC;;;AAG/C,UAAU;EACN,WAAW,EAAE,kBAAkB;EAC/B,GAAG,EAAE,sCAAsC;;;AAG/C,UAAU;EACN,WAAW,EAAE,iBAAiB;EAC9B,GAAG,EAAE,qCAAqC;;;AC3B9C,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB;;AAED,AAAA,IAAI,CAAC;EACD,eAAe,EAAE,MAAM;CAC1B;;AAED,AAAA,EAAE,CAAC;EACC,UAAU,EAAE,IAAI;CACnB;;AAED,AAAA,CAAC,CAAC;EACE,eAAe,EAAE,IAAI;CACxB;;AEhBD,AAAA,KAAK,CAAC;EACF,SAAS,EAAE,IAAI;EACf,mBAAmB,CAAA,EAAC;CACvB",
     "sources": [
         "../scss/main.scss",
+        "../scss/settings/_fonts.scss",
+        "../scss/settings/_reset.scss",
         "../scss/settings/_breakpoints.scss",
-        "../scss/settings/_variables.scss",
+        "../scss/settings/_base.scss",
         "../scss/settings/_mixins.scss",
         "../scss/components/_buttons.scss",
         "../scss/components/_carousel.scss",
