@@ -1,0 +1,144 @@
+#menu-wrap {
+
+    h3,
+    p {
+        text-align: left;
+    }
+
+    h3 {
+        font-size: 1.38rem;
+        font-family: Factoria-Bold;
+    }
+
+    p {
+        font-size: 1.13rem;
+        font-family: Factoria-Medium;
+    }
+
+    .custom-pizza-menu--list,
+    .menu-sides-list {
+        li {
+            color: $secondaryLight;
+            font-family: Factoria-Bold;
+        }
+    }
+
+    .custom-pizza-menu--container {
+        padding: 0 1.3rem;
+
+        .custom-pizza--category {
+            font-size: 1.38rem;
+            font-weight: 600;
+            color: $tertiaryLight;
+            text-transform: capitalize;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    .custom-pizza-menu--side {
+        font-size: 1.38rem;
+        font-family: Factoria-Bold;
+        text-align: center;
+        padding: ($mainPadding/2) $mainPadding $mainPadding;
+        border-top: 1px solid $tertiaryLight;
+    }
+
+    .custom-pizza-menu--list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1.2rem;
+
+
+        li {
+            flex-basis: 50%;
+            font-size: 1.13rem;
+        }
+
+        &.premium {
+            li {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    .menu-sides-list {
+        li {
+            font-size: 1.38rem;
+        }
+    }
+
+    .main-menu--add-info,
+    .main-pizza-menu--vegan-info {
+        font-size: 1.13rem;
+        font-family: Factoria-Medium;
+    }
+
+    .main-pizza-menu--vegan-info {
+        padding: $mainPadding ($mainPadding/2) 0;
+    }
+
+    .custom-pizza-menu--heading {
+        font-size: 2.55rem; //42px
+    }
+
+    .main-menu--side-photo {
+        &:nth-of-type(even) {
+            background-color: $primary;
+        }
+    }
+
+    .menu-side-photo--list,
+    .main-pizza-menu--container {
+        padding: $mainPadding ($mainPadding/2);
+    }
+
+    .main-item:not(:last-of-type),
+    .main-pizza-item:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    .custom-pizza-menu,
+    .menu-sides {
+        h2 {
+            padding: ($mainPadding * .8) 0;
+            background-color: $tertiaryLight;
+        }
+    }
+
+    .custom-pizza-menu {
+        h2 {
+            background-color: $tertiaryLight;
+        }
+
+        &--info {
+            padding: $mainPadding ($mainPadding/2);
+
+            &>h3,
+            &>p {
+                text-align: center;
+            }
+
+            &>h3 {
+                font-size: 1.65rem;
+            }
+        }
+    }
+
+    .menu-sides {
+        text-align: center;
+        background-color: $primary;
+
+        &-list {
+            padding: $mainPadding 0;
+            border-bottom: 1px solid $tertiaryLight;
+        }
+
+        h2 {
+            background-color: $secondary;
+        }
+
+        .sides-item {
+            padding: .7rem 0;
+        }
+    }
+}

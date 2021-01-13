@@ -57,27 +57,27 @@ h2 {
 }
 
 .color-tertiary {
-    color: $tertiaryLight;
+    color: $tertiary;
 }
 
 .color-secondary {
     color: $secondary;
 }
 
-.color-tertiary {
-    color: $tertiaryLight;
+.color-secondaryLight {
+    color: $secondaryLight;
 }
 
 .heading-l {
-    font-size: 3.1rem;
+    font-size: 3.1rem; //50px
 }
 
 .heading-m {
-    font-size: 2.75rem;
+    font-size: 2.75rem; //44px
 }
 
 .heading-s {
-    font-size: 2.6rem;
+    font-size: 2.63rem; //42px
 }
 
 .paragraph-l,
@@ -91,21 +91,21 @@ h2 {
 }
 
 .paragraph-l {
-    font-size: 1.88rem;
+    font-size: 1.88rem; //30px
     color: $secondary;
     text-transform: capitalize;
 }
 
 .paragraph-m {
-    font-size: 1.25rem;
+    font-size: 1.25rem; //20px
 }
 
 .paragraph-s {
-    font-size: 1.13rem;
+    font-size: 1.13rem; //18px
 }
 
 .paragraph-xs {
-    font-size: 1rem;
+    font-size: 1rem; //16px
 }
 
 .primary-heading-font {

@@ -93,15 +93,15 @@ h2 {
 }
 
 .color-tertiary {
-  color: #677576;
+  color: #657575;
 }
 
 .color-secondary {
   color: #9f554a;
 }
 
-.color-tertiary {
-  color: #677576;
+.color-secondaryLight {
+  color: #d9c7bd;
 }
 
 .heading-l {
@@ -113,7 +113,7 @@ h2 {
 }
 
 .heading-s {
-  font-size: 2.6rem;
+  font-size: 2.63rem;
 }
 
 .paragraph-l,
@@ -551,5 +551,139 @@ h1 {
 #about-us .img-side-section--text {
   padding: 0 0 2.5rem;
   background-color: #677576;
+}
+
+#menu-wrap h3,
+#menu-wrap p {
+  text-align: left;
+}
+
+#menu-wrap h3 {
+  font-size: 1.38rem;
+  font-family: Factoria-Bold;
+}
+
+#menu-wrap p {
+  font-size: 1.13rem;
+  font-family: Factoria-Medium;
+}
+
+#menu-wrap .custom-pizza-menu--list li,
+#menu-wrap .menu-sides-list li {
+  color: #d9c7bd;
+  font-family: Factoria-Bold;
+}
+
+#menu-wrap .custom-pizza-menu--container {
+  padding: 0 1.3rem;
+}
+
+#menu-wrap .custom-pizza-menu--container .custom-pizza--category {
+  font-size: 1.38rem;
+  font-weight: 600;
+  color: #677576;
+  text-transform: capitalize;
+  margin-bottom: 1.2rem;
+}
+
+#menu-wrap .custom-pizza-menu--side {
+  font-size: 1.38rem;
+  font-family: Factoria-Bold;
+  text-align: center;
+  padding: 1.25rem 2.5rem 2.5rem;
+  border-top: 1px solid #677576;
+}
+
+#menu-wrap .custom-pizza-menu--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+}
+
+#menu-wrap .custom-pizza-menu--list li {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-size: 1.13rem;
+}
+
+#menu-wrap .custom-pizza-menu--list.premium li {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+#menu-wrap .menu-sides-list li {
+  font-size: 1.38rem;
+}
+
+#menu-wrap .main-menu--add-info,
+#menu-wrap .main-pizza-menu--vegan-info {
+  font-size: 1.13rem;
+  font-family: Factoria-Medium;
+}
+
+#menu-wrap .main-pizza-menu--vegan-info {
+  padding: 2.5rem 1.25rem 0;
+}
+
+#menu-wrap .custom-pizza-menu--heading {
+  font-size: 2.55rem;
+}
+
+#menu-wrap .main-menu--side-photo:nth-of-type(even) {
+  background-color: #1c1c1e;
+}
+
+#menu-wrap .menu-side-photo--list,
+#menu-wrap .main-pizza-menu--container {
+  padding: 2.5rem 1.25rem;
+}
+
+#menu-wrap .main-item:not(:last-of-type),
+#menu-wrap .main-pizza-item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+#menu-wrap .custom-pizza-menu h2,
+#menu-wrap .menu-sides h2 {
+  padding: 2rem 0;
+  background-color: #677576;
+}
+
+#menu-wrap .custom-pizza-menu h2 {
+  background-color: #677576;
+}
+
+#menu-wrap .custom-pizza-menu--info {
+  padding: 2.5rem 1.25rem;
+}
+
+#menu-wrap .custom-pizza-menu--info > h3,
+#menu-wrap .custom-pizza-menu--info > p {
+  text-align: center;
+}
+
+#menu-wrap .custom-pizza-menu--info > h3 {
+  font-size: 1.65rem;
+}
+
+#menu-wrap .menu-sides {
+  text-align: center;
+  background-color: #1c1c1e;
+}
+
+#menu-wrap .menu-sides-list {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #677576;
+}
+
+#menu-wrap .menu-sides h2 {
+  background-color: #9f554a;
+}
+
+#menu-wrap .menu-sides .sides-item {
+  padding: .7rem 0;
 }
 /*# sourceMappingURL=main.css.map */
