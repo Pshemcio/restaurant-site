@@ -30,7 +30,7 @@
 
 :root {
   font-size: 16px;
-  --carousel-quantity: 3;
+  --carousel-quantity: 1;
 }
 
 * {
@@ -48,8 +48,11 @@ body {
   background-color: #232325;
 }
 
+header {
+  padding-top: 3rem;
+}
+
 img {
-  display: none;
   width: 100%;
 }
 
@@ -59,6 +62,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button * {
+  pointer-events: none;
 }
 
 h1,
@@ -98,6 +105,7 @@ h1 {
 
 .paragraph-l {
   font-size: 1.88rem;
+  color: #9f554a;
   text-transform: capitalize;
 }
 
@@ -133,15 +141,333 @@ h1 {
 }
 
 .main-btn {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 3.1rem;
+  width: 13rem;
+  margin: 0 auto;
   font-size: 1.12rem;
   font-family: Factoria-Medium, sans-serif;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  -webkit-transition: color .3s, border-color .3s, background-color .3s;
+  transition: color .3s, border-color .3s, background-color .3s;
+  border: 2px solid;
+  border-radius: 30rem;
+  outline: none;
 }
 
-.main-nav-item--inner {
+.main-btn.color-secondary {
+  color: #9f554a;
+  border-color: #9f554a;
+}
+
+.main-btn.color-secondary--light {
+  color: #d9c7bd;
+  border-color: #d9c7bd;
+}
+
+.main-btn.color-tertiary {
+  color: #657575;
+  border-color: #657575;
+}
+
+.main-btn:hover, .main-btn:focus {
+  color: #657575;
+  border-color: #d9c7bd;
+  background-color: #d9c7bd;
+}
+
+.burger-btn {
+  position: relative;
+  height: 2.2rem;
+  width: 2.2rem;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  z-index: 2;
+}
+
+.burger-btn .burger-btn--inner, .burger-btn::before, .burger-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  height: 2px;
+  width: 70%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #9f554a;
+  -webkit-transition: -webkit-transform .2s ease-in;
+  transition: -webkit-transform .2s ease-in;
+  transition: transform .2s ease-in;
+  transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+  pointer-events: none;
+}
+
+.burger-btn .burger-btn--inner {
+  top: 50%;
+}
+
+.burger-btn::before {
+  top: 25%;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.burger-btn::after {
+  top: 75%;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  background: #232325;
+}
+
+.carousel .new-items,
+.carousel .init-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel .carousel-control-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 50px;
+  width: 50px;
+  background-color: rgba(159, 85, 74, 0.5);
+  color: #d9c7bd;
+  border: none;
+  border-radius: 10%;
+  font-size: 25px;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background-color .3s, border-radius .3s;
+  transition: background-color .3s, border-radius .3s;
+}
+
+.carousel .carousel-control-btn:hover {
+  border-radius: 50%;
+}
+
+.carousel .carousel-control-btn:focus {
+  background-color: rgba(159, 85, 74, 0.9);
+}
+
+.carousel .carousel-control-btn.right {
+  right: 0;
+}
+
+.carousel .carousel-items {
+  position: relative;
+  left: calc(-100vw/var(--carousel-quantity));
+  -webkit-transition: -webkit-transform .7s;
+  transition: -webkit-transform .7s;
+  transition: transform .7s;
+  transition: transform .7s, -webkit-transform .7s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel .carousel-items.transition-off {
+  -webkit-transition: -webkit-transform 0s;
+  transition: -webkit-transform 0s;
+  transition: transform 0s;
+  transition: transform 0s, -webkit-transform 0s;
+}
+
+.carousel .carousel-items img {
+  display: inline-block;
+  height: calc(100vw);
+  width: calc(100vw);
+}
+
+@media (min-width: 768px) {
+  .carousel .carousel-items img {
+    height: 50vw;
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel .carousel-items img {
+    height: calc(100vw/3);
+    width: calc(100vw/3);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --carousel-quantity: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --carousel-quantity: 3;
+  }
+}
+
+#main-nav {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .6rem 10vw;
+}
+
+#main-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1e;
+}
+
+#main-nav .main-nav-list {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  background-color: rgba(159, 85, 74, 0.7);
+  width: 80%;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+#main-nav.menu-active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(28, 28, 30, 0.8);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  -webkit-animation: opacity .5s both;
+          animation: opacity .5s both;
+}
+
+#main-nav.menu-active .main-nav-list {
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  padding: 1rem 0;
+}
+
+#main-nav .main-nav-item--inner {
   display: block;
   font-size: 1.5rem;
   font-family: Factoria-Medium, sans-serif;
   color: white;
+  text-align: right;
+  padding: .4rem 1.5rem;
+}
+
+#main-nav .main-nav-hover-options .main-nav-item--inner {
+  padding-right: 3rem;
+}
+
+#main-nav .logo {
+  width: 3rem;
+  height: 3rem;
+  z-index: 2;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#main-footer small,
+#main-footer small > a {
+  color: #666;
+}
+
+#main-footer a,
+#main-footer p {
+  color: #9f554a;
+  text-align: left;
+}
+
+#main-header {
+  background-image: url(../img/img-mobile/cutiepies-pizza-1-xs.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 4rem;
+  min-height: 115vh;
+}
+
+#main-header h1 {
+  line-height: 3rem;
+}
+
+#main-header .main-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 28vh;
+}
+
+.bg-side,
+.img-side-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=main.css.map */

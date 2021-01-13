@@ -1,0 +1,26 @@
+#main-header {
+    background-image: url(../img/img-mobile/cutiepies-pizza-1-xs.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: $logoSize + 1;
+    min-height: 115vh;
+
+    h1 {
+        line-height: 3rem;
+    }
+
+    .main-btns {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 28vh;
+    }
+}
+
+.bg-side,
+.img-side-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}

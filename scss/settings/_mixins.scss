@@ -10,4 +10,20 @@
             @content;
         }
     }
+
+    @else {
+        @warn "Nie można pobrać żadnej wartości z `#{$breakpoint}`. Nie jest zdefiniowany w mapie `$breakpoints` lub jest nieprawidłową liczbą px, em, lub rem.";
+    }
+}
+
+@mixin button-color($color) {
+    color: $color;
+    border-color: $color;
+}
+
+@mixin pseudo-start {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
 }

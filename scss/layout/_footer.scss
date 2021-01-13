@@ -1,0 +1,13 @@
+#main-footer {
+
+    small,
+    small>a {
+        color: #666;
+    }
+
+    a,
+    p {
+        color: $secondary;
+        text-align: left;
+    }
+}

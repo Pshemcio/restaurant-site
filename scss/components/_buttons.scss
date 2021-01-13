@@ -1,5 +1,69 @@
 .main-btn {
+    display: grid;
+    place-items: center;
+    height: 3.1rem;
+    width: 13rem;
+    margin: 0 auto;
     font-size: 1.12rem;
     font-family: Factoria-Medium, sans-serif;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    transition: color .3s, border-color .3s, background-color .3s;
+    border: 2px solid;
+    border-radius: 30rem;
+    outline: none;
+
+    &.color-secondary {
+        @include button-color($secondary);
+    }
+
+    &.color-secondary--light {
+        @include button-color($secondaryLight);
+    }
+
+    &.color-tertiary {
+        @include button-color($tertiary);
+    }
+
+    &:hover,
+    &:focus {
+        color: $tertiary;
+        border-color: $secondaryLight;
+        background-color: $secondaryLight;
+    }
+}
+
+.burger-btn {
+    position: relative;
+    height: $burgerBtnSize;
+    width: $burgerBtnSize;
+    transition: transform .5s;
+    z-index: 2;
+
+    .burger-btn--inner,
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        height: 2px;
+        width: 70%;
+        transform: translate(-50%, -50%);
+        background-color: $secondary;
+        transition: transform .2s ease-in;
+        pointer-events: none;
+    }
+
+    .burger-btn--inner {
+        top: 50%;
+    }
+
+    &::before {
+        top: 25%;
+        transform-origin: right;
+    }
+
+    &::after {
+        top: 75%;
+        transform-origin: right;
+    }
 }

@@ -1,0 +1,80 @@
+// reinventing the wheel mainly for learning purposes :)
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    background: $primaryLight;
+
+    .new-items,
+    .init-items {
+        display: flex;
+    }
+
+    .carousel-control-btn {
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        transform: translateY(-50%);
+        height: $carouselBtnSize;
+        width: $carouselBtnSize;
+        background-color: rgba($secondary, .5);
+        color: $secondaryLight;
+        border: none;
+        border-radius: 10%;
+        font-size: $carouselBtnSize / 2;
+        cursor: pointer;
+        outline: none;
+        transition: background-color .3s, border-radius .3s;
+
+        &:hover {
+            border-radius: 50%;
+        }
+
+        &:focus {
+            background-color: rgba($secondary, .9);
+        }
+    }
+
+    .carousel-control-btn.right {
+        right: 0;
+    }
+
+    .carousel-items {
+        position: relative;
+        left: calc(-100vw/var(--carousel-quantity));
+        transition: transform .7s;
+        display: flex;
+
+        &.transition-off {
+            transition: transform 0s;
+        }
+
+        img {
+            display: inline-block;
+            height: calc(100vw);
+            width: calc(100vw);
+
+            @include breakpoint(sm) {
+                height: 50vw;
+                width: 50vw;
+            }
+
+            @include breakpoint(lg) {
+                height: calc(100vw/3);
+                width: calc(100vw/3);
+            }
+        }
+    }
+}
+
+@include breakpoint(sm) {
+    :root {
+        --carousel-quantity: 2;
+    }
+}
+
+@include breakpoint(lg) {
+    :root {
+        --carousel-quantity: 3;
+    }
+}
