@@ -441,15 +441,48 @@ h1 {
   }
 }
 
-#main-footer small,
-#main-footer small > a {
-  color: #666;
+#main-footer {
+  padding: 2rem;
+  background-color: #1c1c1e;
 }
 
 #main-footer a,
 #main-footer p {
   color: #9f554a;
   text-align: left;
+}
+
+#main-footer .contact-info,
+#main-footer .opening-info {
+  margin-bottom: 3rem;
+}
+
+#main-footer .contact-info > *,
+#main-footer .opening-info > * {
+  margin-bottom: .8rem;
+}
+
+#main-footer .copywright-socials-info {
+  text-align: center;
+}
+
+#main-footer .copywright-socials-info small {
+  display: block;
+  text-align: justify;
+}
+
+#main-footer .copywright-socials-info small,
+#main-footer .copywright-socials-info small > a {
+  color: #666;
+}
+
+#main-footer .socials {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+#main-footer .socials .github {
+  margin-right: 4rem;
 }
 
 .bg-side p,
@@ -480,7 +513,7 @@ h1 {
 }
 
 #pizza-break {
-  background-image: url(/img/img-desktop/cheese-background.jpg);
+  background-image: url(../img/img-desktop/cheese-background.jpg);
   height: 40vh;
 }
 

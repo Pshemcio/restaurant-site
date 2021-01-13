@@ -1,13 +1,42 @@
 #main-footer {
-
-    small,
-    small>a {
-        color: #666;
-    }
+    padding: 2rem;
+    background-color: $primary;
 
     a,
     p {
         color: $secondary;
         text-align: left;
+    }
+
+    .contact-info,
+    .opening-info {
+        margin-bottom: 3rem;
+
+        &>* {
+            margin-bottom: .8rem;
+        }
+    }
+
+    .copywright-socials-info {
+        text-align: center;
+
+        small {
+            display: block;
+            text-align: justify;
+        }
+
+        small,
+        small>a {
+            color: #666;
+        }
+    }
+
+    .socials {
+        padding-bottom: 1rem;
+        font-size: 2rem;
+
+        .github {
+            margin-right: 4rem;
+        }
     }
 }
