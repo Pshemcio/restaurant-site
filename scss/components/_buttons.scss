@@ -3,7 +3,7 @@
     place-items: center;
     height: 3.1rem;
     width: 13rem;
-    margin: 0 auto;
+    margin: 0 auto 1.2rem;
     font-size: 1.12rem;
     font-family: Factoria-Medium, sans-serif;
     text-transform: capitalize;
@@ -11,17 +11,18 @@
     border: 2px solid;
     border-radius: 30rem;
     outline: none;
+    padding-bottom: .25rem;
 
     &.color-secondary {
-        @include button-color($secondary);
+        @include buttonColor($secondary);
     }
 
     &.color-secondary--light {
-        @include button-color($secondaryLight);
+        @include buttonColor($secondaryLight);
     }
 
     &.color-tertiary {
-        @include button-color($tertiary);
+        @include buttonColor($tertiary);
     }
 
     &:hover,

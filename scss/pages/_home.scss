@@ -1,26 +1,64 @@
-#main-header {
-    background-image: url(../img/img-mobile/cutiepies-pizza-1-xs.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: $logoSize + 1;
-    min-height: 115vh;
-
-    h1 {
-        line-height: 3rem;
-    }
-
-    .main-btns {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 28vh;
+.bg-side,
+.img-side-section {
+    p {
+        padding: 1rem 1rem 2rem;
     }
 }
 
-.bg-side,
-.img-side-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+#main-header {
+    @include bgSideStarter('../img/img-mobile/cutiepies-pizza-1-xs.jpg');
+    background-position-y: $logoSize + 1;
+}
+
+#menu {
+    @include bgSideStarter('../img/img-mobile/cutiepies-pizza-2-xs.jpg');
+    padding-top: 40vh;
+    padding-bottom: $mainPadding;
+}
+
+#reservation {
+    background-color: $tertiaryLight;
+    padding-bottom: $mainPadding;
+}
+
+#pizza-break {
+    background-image: url(/img/img-desktop/cheese-background.jpg);
+    height: 40vh;
+}
+
+#drink-menu {
+    @include bgSideStarter('../img/img-mobile/cutiepies-drinks-mobile.jpg');
+    background-size: 470%;
+    background-position: center top;
+    padding-top: 5vh;
+    padding-bottom: 45vh;
+}
+
+#happy-hours {
+    padding: 3.5rem 0;
+
+    h2 {
+        padding-top: 0;
+    }
+
+    .happy-hours-info--days {
+        color: $secondary;
+        font-size: 1.3rem;
+        font-family: Factoria-Bold;
+        margin: 1rem 0;
+    }
+}
+
+#parties {
+    .img-side-section--text {
+        padding: $mainPadding 0;
+        background-color: $secondary;
+    }
+}
+
+#about-us {
+    .img-side-section--text {
+        padding: 0 0 $mainPadding;
+        background-color: $tertiaryLight;
+    }
 }

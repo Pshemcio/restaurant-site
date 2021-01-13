@@ -16,14 +16,21 @@
     }
 }
 
-@mixin button-color($color) {
+@mixin buttonColor($color) {
     color: $color;
     border-color: $color;
 }
 
-@mixin pseudo-start {
+@mixin pseudoStart {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
+}
+
+@mixin bgSideStarter($img) {
+    background-image: url($img);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 50vh;
 }

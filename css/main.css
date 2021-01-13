@@ -52,6 +52,10 @@ header {
   padding-top: 3rem;
 }
 
+address {
+  font-style: normal;
+}
+
 img {
   width: 100%;
 }
@@ -81,6 +85,25 @@ h1 {
   font-family: TrendRoughSansOne, sans-serif;
 }
 
+h1,
+h2 {
+  line-height: 3rem;
+  margin: 0;
+  padding: 2rem 0 1rem;
+}
+
+.color-tertiary {
+  color: #677576;
+}
+
+.color-secondary {
+  color: #9f554a;
+}
+
+.color-tertiary {
+  color: #677576;
+}
+
 .heading-l {
   font-size: 3.1rem;
 }
@@ -90,7 +113,7 @@ h1 {
 }
 
 .heading-s {
-  font-size: 50px;
+  font-size: 2.6rem;
 }
 
 .paragraph-l,
@@ -110,7 +133,7 @@ h1 {
 }
 
 .paragraph-m {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
 .paragraph-s {
@@ -146,7 +169,7 @@ h1 {
   place-items: center;
   height: 3.1rem;
   width: 13rem;
-  margin: 0 auto;
+  margin: 0 auto 1.2rem;
   font-size: 1.12rem;
   font-family: Factoria-Medium, sans-serif;
   text-transform: capitalize;
@@ -155,6 +178,7 @@ h1 {
   border: 2px solid;
   border-radius: 30rem;
   outline: none;
+  padding-bottom: .25rem;
 }
 
 .main-btn.color-secondary {
@@ -428,46 +452,71 @@ h1 {
   text-align: left;
 }
 
+.bg-side p,
+.img-side-section p {
+  padding: 1rem 1rem 2rem;
+}
+
 #main-header {
-  background-image: url(../img/img-mobile/cutiepies-pizza-1-xs.jpg);
+  background-image: url("../img/img-mobile/cutiepies-pizza-1-xs.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  padding-top: 50vh;
   background-position-y: 4rem;
-  min-height: 115vh;
 }
 
-#main-header h1 {
-  line-height: 3rem;
+#menu {
+  background-image: url("../img/img-mobile/cutiepies-pizza-2-xs.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 50vh;
+  padding-top: 40vh;
+  padding-bottom: 2.5rem;
 }
 
-#main-header .main-btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  height: 28vh;
+#reservation {
+  background-color: #677576;
+  padding-bottom: 2.5rem;
 }
 
-.bg-side,
-.img-side-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+#pizza-break {
+  background-image: url(/img/img-desktop/cheese-background.jpg);
+  height: 40vh;
+}
+
+#drink-menu {
+  background-image: url("../img/img-mobile/cutiepies-drinks-mobile.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 50vh;
+  background-size: 470%;
+  background-position: center top;
+  padding-top: 5vh;
+  padding-bottom: 45vh;
+}
+
+#happy-hours {
+  padding: 3.5rem 0;
+}
+
+#happy-hours h2 {
+  padding-top: 0;
+}
+
+#happy-hours .happy-hours-info--days {
+  color: #9f554a;
+  font-size: 1.3rem;
+  font-family: Factoria-Bold;
+  margin: 1rem 0;
+}
+
+#parties .img-side-section--text {
+  padding: 2.5rem 0;
+  background-color: #9f554a;
+}
+
+#about-us .img-side-section--text {
+  padding: 0 0 2.5rem;
+  background-color: #677576;
 }
 /*# sourceMappingURL=main.css.map */
