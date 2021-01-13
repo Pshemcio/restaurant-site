@@ -92,6 +92,10 @@
         padding: $mainPadding ($mainPadding/2);
     }
 
+    .main-pizza-menu--container {
+        padding-top: 0;
+    }
+
     .main-item:not(:last-of-type),
     .main-pizza-item:not(:last-of-type) {
         margin-bottom: 10px;
@@ -139,6 +143,16 @@
 
         .sides-item {
             padding: .7rem 0;
+        }
+    }
+
+    .main-pizza-menu--img-wrap {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        img {
+            width: 220%;
         }
     }
 }

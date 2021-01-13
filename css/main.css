@@ -485,6 +485,108 @@ h1 {
   margin-right: 4rem;
 }
 
+.form-wrap {
+  min-height: 100vh;
+  background-color: #1c1c1e;
+  padding-top: 6rem;
+}
+
+.form-wrap .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-wrap h1 {
+  font-family: TrendRoughSansFive;
+  font-size: 2.8rem;
+}
+
+.form-wrap form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 1rem;
+}
+
+.form-wrap form input,
+.form-wrap form textarea {
+  outline: none;
+  font-family: Factoria-Medium;
+  background-color: transparent;
+  border: 2px solid #657575;
+  padding: .9rem;
+  color: #677576;
+  font-size: 1rem;
+}
+
+.form-wrap form input:focus,
+.form-wrap form textarea:focus {
+  background-color: rgba(28, 28, 30, 0.2);
+}
+
+.form-wrap form input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 1.4rem;
+}
+
+.form-wrap form textarea {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 21vh;
+  margin-bottom: .7rem;
+}
+
+.form-wrap form input[type='submit'] {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  background-color: #657575;
+  margin-left: auto;
+  padding: .5rem 1.1rem;
+  text-transform: capitalize;
+  color: #d9c7bd;
+  font-size: 1.1em;
+  cursor: pointer;
+  -webkit-transition: background-color .4s;
+  transition: background-color .4s;
+}
+
+.form-wrap form input[type='submit']:focus, .form-wrap form input[type='submit']:hover {
+  background-color: rgba(28, 28, 30, 0.2);
+}
+
+.form-wrap form input::-webkit-input-placeholder,
+.form-wrap form textarea::-webkit-input-placeholder {
+  text-transform: capitalize;
+  color: #657575;
+}
+
+.form-wrap form input:-ms-input-placeholder,
+.form-wrap form textarea:-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #657575;
+}
+
+.form-wrap form input::-ms-input-placeholder,
+.form-wrap form textarea::-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #657575;
+}
+
+.form-wrap form input::placeholder,
+.form-wrap form textarea::placeholder {
+  text-transform: capitalize;
+  color: #657575;
+}
+
 .bg-side p,
 .img-side-section p {
   padding: 1rem 1rem 2rem;
@@ -641,6 +743,10 @@ h1 {
   padding: 2.5rem 1.25rem;
 }
 
+#menu-wrap .main-pizza-menu--container {
+  padding-top: 0;
+}
+
 #menu-wrap .main-item:not(:last-of-type),
 #menu-wrap .main-pizza-item:not(:last-of-type) {
   margin-bottom: 10px;
@@ -685,5 +791,19 @@ h1 {
 
 #menu-wrap .menu-sides .sides-item {
   padding: .7rem 0;
+}
+
+#menu-wrap .main-pizza-menu--img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+#menu-wrap .main-pizza-menu--img-wrap img {
+  width: 220%;
 }
 /*# sourceMappingURL=main.css.map */
