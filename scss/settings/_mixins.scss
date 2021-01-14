@@ -10,9 +10,33 @@
             @content;
         }
     }
+}
 
-    @else {
-        @warn "Nie można pobrać żadnej wartości z `#{$breakpoint}`. Nie jest zdefiniowany w mapie `$breakpoints` lub jest nieprawidłową liczbą px, em, lub rem.";
+@mixin breakpointLandscape($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{ map-get( $breakpoints, $breakpoint ) }) and (orientation: landscape) {
+            @content;
+        }
+    }
+
+    @else if type_of($breakpoint)==number and unit($breakpoint)==px or unit($breakpoint)==em or unit($breakpoint)==rem {
+        @media (min-width: $breakpoint) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpointPortrait($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{ map-get( $breakpoints, $breakpoint ) }) and (orientation: portrait) {
+            @content;
+        }
+    }
+
+    @else if type_of($breakpoint)==number and unit($breakpoint)==px or unit($breakpoint)==em or unit($breakpoint)==rem {
+        @media (min-width: $breakpoint) and (orientation: portrait) {
+            @content;
+        }
     }
 }
 
@@ -28,9 +52,18 @@
     left: 0;
 }
 
-@mixin bgSideStarter($img) {
+@mixin bgSideMobile($img) {
     background-image: url($img);
     background-size: contain;
     background-repeat: no-repeat;
     padding-top: 50vh;
+}
+
+@mixin bgSideDesktop($img) {
+    background-image: url($img);
+    background-size: cover;
+    padding-top: $logoSize;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }

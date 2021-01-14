@@ -51,6 +51,11 @@
         color: white;
         text-align: right;
         padding: .4rem 1.5rem;
+
+        @media (orientation:landscape) {
+            padding: .1rem 1.5rem;
+            font-size: 1.3rem;
+        }
     }
 
     .main-nav-hover-options {

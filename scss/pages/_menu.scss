@@ -67,6 +67,11 @@
         }
     }
 
+    .main-pizza-menu,
+    .custom-pizza-menu {
+        background-color: $primaryLight;
+    }
+
     .main-menu--add-info,
     .main-pizza-menu--vegan-info {
         font-size: 1.13rem;
@@ -82,8 +87,8 @@
     }
 
     .main-menu--side-photo {
-        &:nth-of-type(even) {
-            background-color: $primary;
+        &:nth-of-type(odd) {
+            background-color: $primaryLight;
         }
     }
 

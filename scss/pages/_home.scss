@@ -1,24 +1,72 @@
+.home-wrap {
+    background-color: $primaryLight;
+}
+
 .bg-side,
 .img-side-section {
     p {
         padding: 1rem 1rem 2rem;
     }
+
+    @media (orientation:landscape) {
+        p {
+            padding: 1rem 0 2rem;
+        }
+    }
 }
 
 #main-header {
-    @include bgSideStarter('../img/img-mobile/cutiepies-pizza-1-xs.jpg');
+    @include bgSideMobile('../img/img-mobile/cutiepies-pizza-1-xs.jpg');
     background-position-y: $logoSize + 1;
+
+    @media (orientation:landscape) {
+        @include bgSideDesktop('../img/img-desktop/cutiepies-pizza-1.jpg');
+        background-position-x: -30vw;
+        justify-content: flex-end;
+        padding-right: 5vw;
+
+        h1,
+        p {
+            text-align: right;
+        }
+
+        .main-btns {
+            display: flex;
+            justify-content: flex-end;
+
+            .main-btn {
+                margin: 0 0 2rem 1rem;
+            }
+        }
+    }
 }
 
 #menu {
-    @include bgSideStarter('../img/img-mobile/cutiepies-pizza-2-xs.jpg');
+    @include bgSideMobile('../img/img-mobile/cutiepies-pizza-2-xs.jpg');
     padding-top: 40vh;
     padding-bottom: $mainPadding;
+
+    @media (orientation:landscape) {
+        @include bgSideDesktop('../img/img-desktop/cutiepies-pizza-2.jpg');
+        background-position-x: 10vw;
+        padding-left: 5vw;
+
+        .main-btn {
+            margin: 0;
+        }
+    }
 }
 
 #reservation {
     background-color: $tertiaryLight;
-    padding-bottom: $mainPadding;
+
+    .img-side-section--text {
+        padding: $mainPadding 0;
+
+        @media (orientation:landscape) {
+            padding: $mainPadding 18vw;
+        }
+    }
 }
 
 #pizza-break {
@@ -27,15 +75,32 @@
 }
 
 #drink-menu {
-    @include bgSideStarter('../img/img-mobile/cutiepies-drinks-mobile.jpg');
+    @include bgSideMobile('../img/img-mobile/cutiepies-drinks-mobile.jpg');
     background-size: 470%;
     background-position: center top;
-    padding-top: 5vh;
+    padding: $mainPadding 0;
     padding-bottom: 45vh;
+
+    @media (orientation:landscape) {
+        @include bgSideDesktop('../img/img-desktop/cutiepies-drinks.jpg');
+        background-size: 200%;
+        background-position: left;
+        padding: $mainPadding;
+        padding-right: 40vw;
+
+        h2,
+        p {
+            text-align: left;
+        }
+
+        .main-btn {
+            margin: 0;
+        }
+    }
 }
 
 #happy-hours {
-    padding: 3.5rem 0;
+    padding: $mainPadding 1rem;
 
     h2 {
         padding-top: 0;
@@ -53,12 +118,20 @@
     .img-side-section--text {
         padding: $mainPadding 0;
         background-color: $secondary;
+
+        @media (orientation:landscape) {
+            padding: $mainPadding 18vw;
+        }
     }
 }
 
 #about-us {
     .img-side-section--text {
-        padding: 0 0 $mainPadding;
+        padding: $mainPadding 1rem;
         background-color: $tertiaryLight;
+
+        @media (orientation:landscape) {
+            padding: $mainPadding 14vw;
+        }
     }
 }
