@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="shortcut icon" href="img/logo-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/boilerplate.css">
     <link rel="stylesheet" href="css/main.css">
@@ -29,7 +30,7 @@
                     </div>
                 </li>
                 <li class="main-nav-item"><a href="menu.html" class="main-nav-item--inner">Menu</a></li>
-                <li class="main-nav-item"><a href="reservation.html" class="main-nav-item--inner">Reservations</a></li>
+                <li class="main-nav-item"><a href="https://zjedz.my/" class="main-nav-item--inner">Reservations</a></li>
                 <li class="main-nav-item"><a href="drink-menu.html" class="main-nav-item--inner">Drinks</a></li>
                 <li class="main-nav-item"><a href="parties.html" class="main-nav-item--inner">Parties</a></li>
                 <li class="main-nav-item"><a href="contact.html" class="main-nav-item--inner">Contact</a></li>
@@ -140,9 +141,10 @@
 
         <div class="pizza-menu">
             <div class="main-pizza-menu">
-                <div class="main-pizza-menu--img-wrap">
-                    <img src="img/menu-items/specialty-pizzas.jpg" alt="pizza with meat and jalapeno" class="jumbo-img">
-                </div>
+                <picture class="jumbo-img">
+                    <source srcset="img/menu-items/specialty-pizzas.jpg" media="(min-width: 800px)">
+                    <img src="img/menu-items/specialty-pizzas-mobile.jpg" alt="pizza with meat and jalapeno">
+                </picture>
                 <p class="main-pizza-menu--vegan-info color-secondary">
                     Vegan Cheese and Gluten Friendly Cauliflower Crust Available
                 </p>

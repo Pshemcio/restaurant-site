@@ -499,6 +499,7 @@ h1 {
 .form-wrap h1 {
   font-family: TrendRoughSansFive;
   font-size: 2.8rem;
+  text-align: left;
 }
 
 .form-wrap form {
@@ -535,7 +536,7 @@ h1 {
 .form-wrap form input {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin-bottom: 1.4rem;
+  margin-bottom: .8rem;
 }
 
 .form-wrap form textarea {
@@ -793,17 +794,17 @@ h1 {
   padding: .7rem 0;
 }
 
-#menu-wrap .main-pizza-menu--img-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  overflow: hidden;
+#parties-wrap .form-aside-info p {
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
-#menu-wrap .main-pizza-menu--img-wrap img {
-  width: 220%;
+#parties-wrap .form-aside-info p + p {
+  color: #657575;
+}
+
+#parties-wrap .form-aside-info .paragraph-l {
+  line-height: 2rem;
+  text-transform: none;
 }
 /*# sourceMappingURL=main.css.map */
