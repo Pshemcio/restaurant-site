@@ -75,6 +75,7 @@
         color: white;
         text-align: right;
         padding: .4rem 1.5rem;
+        transition: color .4s;
 
         @include breakpoint(xs) {
             padding: .1rem 1.5rem;
@@ -92,6 +93,11 @@
             font-size: 1rem;
             text-align: left;
             line-height: $logoSize *1.6;
+
+            &:hover,
+            &:focus {
+                color: $secondaryLight;
+            }
         }
     }
 
@@ -143,6 +149,10 @@
             width: $logoSize *1.6;
             height: $logoSize *1.6;
         }
+    }
+
+    .active {
+        color: $secondaryLight;
     }
 }
 

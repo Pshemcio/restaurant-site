@@ -1,4 +1,9 @@
 #parties-wrap {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     .form-aside-info {
         p {
             margin-bottom: 2rem;
@@ -12,6 +17,18 @@
         .paragraph-l {
             line-height: 2rem;
             text-transform: none;
+        }
+    }
+
+    #main-footer {
+        @include breakpointPortrait(sm) {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @include breakpointPortrait(md) {
+            width: 100%;
+            margin: 0 auto;
         }
     }
 }

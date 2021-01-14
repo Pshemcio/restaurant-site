@@ -1,22 +1,55 @@
 .form-wrap {
-    min-height: 100vh;
     background-color: $primary;
-    padding-top: $logoSize *2;
-
-
-    @include breakpointPortrait(sm) {
-        min-height: 75vh;
-    }
 
     .container {
-        width: 80%;
-        margin: 0 auto;
+        padding: $logoSize 10vw;
+
+        @include breakpoint(md) {
+            display: flex;
+            justify-content: space-between;
+            padding: $logoSize * 1.5 5vw 0;
+
+            form {
+                flex-basis: 70%;
+            }
+
+            .form-aside-info,
+            h1 {
+                flex-basis: 25%;
+                padding-right: 1rem;
+            }
+        }
+
+        @include breakpoint(lg) {
+            padding: $logoSize * 2 10vw 0;
+
+            form {
+                flex-basis: 62%;
+            }
+        }
+
+        @include breakpointPortrait(md) {
+            padding: $logoSize * 3 6vw;
+
+            form {
+                flex-basis: 635%;
+            }
+
+            .form-aside-info,
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
     }
 
     h1 {
         font-family: TrendRoughSansFive;
         font-size: 2.8rem;
         text-align: left;
+
+        @include breakpoint(md) {
+            font-size: 3.4rem;
+        }
     }
 
     form {
@@ -25,6 +58,10 @@
         justify-content: space-between;
         align-items: flex-start;
         padding-top: 1rem;
+
+        @include breakpoint(md) {
+            padding-top: 0;
+        }
 
         input,
         textarea {
@@ -44,6 +81,10 @@
         input {
             flex-basis: 100%;
             margin-bottom: .8rem;
+
+            @include breakpoint(xs) {
+                flex-basis: 48%;
+            }
         }
 
         textarea {

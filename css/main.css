@@ -505,6 +505,8 @@ h1 {
   color: white;
   text-align: right;
   padding: .4rem 1.5rem;
+  -webkit-transition: color .4s;
+  transition: color .4s;
 }
 
 @media (min-width: 512px) {
@@ -528,6 +530,9 @@ h1 {
     font-size: 1rem;
     text-align: left;
     line-height: 4.8rem;
+  }
+  #main-nav .main-nav-item--inner:hover, #main-nav .main-nav-item--inner:focus {
+    color: #d9c7bd;
   }
 }
 
@@ -580,6 +585,10 @@ h1 {
   }
 }
 
+#main-nav .active {
+  color: #d9c7bd;
+}
+
 @-webkit-keyframes opacity {
   0% {
     opacity: 0;
@@ -619,6 +628,18 @@ h1 {
 #main-footer p {
   color: #9f554a;
   text-align: left;
+}
+
+#main-footer a,
+#main-footer .original-page {
+  -webkit-transition: color .4s;
+  transition: color .4s;
+}
+
+#main-footer a:hover, #main-footer a:focus,
+#main-footer .original-page:hover,
+#main-footer .original-page:focus {
+  color: #d9c7bd;
 }
 
 @media (min-width: 992px) {
@@ -693,6 +714,8 @@ h1 {
 #main-footer .socials {
   padding-bottom: 1rem;
   font-size: 2rem;
+  -webkit-transition: color .3s;
+  transition: color .3s;
 }
 
 #main-footer .socials .github {
@@ -709,26 +732,69 @@ h1 {
 }
 
 .form-wrap {
-  min-height: 100vh;
   background-color: #1c1c1e;
-  padding-top: 6rem;
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .form-wrap {
-    min-height: 75vh;
-  }
 }
 
 .form-wrap .container {
-  width: 80%;
-  margin: 0 auto;
+  padding: 3rem 10vw;
+}
+
+@media (min-width: 992px) {
+  .form-wrap .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 4.5rem 5vw 0;
+  }
+  .form-wrap .container form {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+  }
+  .form-wrap .container .form-aside-info,
+  .form-wrap .container h1 {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form-wrap .container {
+    padding: 6rem 10vw 0;
+  }
+  .form-wrap .container form {
+    -ms-flex-preferred-size: 62%;
+        flex-basis: 62%;
+  }
+}
+
+@media (min-width: 992px) and (orientation: portrait) {
+  .form-wrap .container {
+    padding: 9rem 6vw;
+  }
+  .form-wrap .container form {
+    -ms-flex-preferred-size: 635%;
+        flex-basis: 635%;
+  }
+  .form-wrap .container .form-aside-info,
+  .form-wrap .container h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .form-wrap h1 {
   font-family: TrendRoughSansFive;
   font-size: 2.8rem;
   text-align: left;
+}
+
+@media (min-width: 992px) {
+  .form-wrap h1 {
+    font-size: 3.4rem;
+  }
 }
 
 .form-wrap form {
@@ -744,6 +810,12 @@ h1 {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-top: 1rem;
+}
+
+@media (min-width: 992px) {
+  .form-wrap form {
+    padding-top: 0;
+  }
 }
 
 .form-wrap form input,
@@ -766,6 +838,13 @@ h1 {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: .8rem;
+}
+
+@media (min-width: 512px) {
+  .form-wrap form input {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
 }
 
 .form-wrap form textarea {
@@ -975,7 +1054,7 @@ h1 {
 
 @media (min-width: 1200px) {
   #main-header {
-    background-position-x: left;
+    background-position-x: right;
   }
 }
 
@@ -1432,6 +1511,20 @@ h1 {
   padding: .7rem 0;
 }
 
+#parties-wrap {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 #parties-wrap .form-aside-info p {
   margin-bottom: 2rem;
   text-align: left;
@@ -1444,5 +1537,47 @@ h1 {
 #parties-wrap .form-aside-info .paragraph-l {
   line-height: 2rem;
   text-transform: none;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  #parties-wrap #main-footer {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) and (orientation: portrait) {
+  #parties-wrap #main-footer {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+#contact-wrap {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  #contact-wrap #main-footer {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) and (orientation: portrait) {
+  #contact-wrap #main-footer {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
