@@ -12,20 +12,6 @@
     }
 }
 
-@mixin breakpointLandscape($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (min-width: #{ map-get( $breakpoints, $breakpoint ) }) and (orientation: landscape) {
-            @content;
-        }
-    }
-
-    @else if type_of($breakpoint)==number and unit($breakpoint)==px or unit($breakpoint)==em or unit($breakpoint)==rem {
-        @media (min-width: $breakpoint) and (orientation: landscape) {
-            @content;
-        }
-    }
-}
-
 @mixin breakpointPortrait($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         @media (min-width: #{ map-get( $breakpoints, $breakpoint ) }) and (orientation: portrait) {
@@ -56,13 +42,13 @@
     background-image: url($img);
     background-size: contain;
     background-repeat: no-repeat;
-    padding-top: 50vh;
+    padding-top: 40vh;
 }
 
 @mixin bgSideDesktop($img) {
     background-image: url($img);
     background-size: cover;
-    padding-top: $logoSize;
+    padding: 0;
     min-height: 100vh;
     display: flex;
     align-items: center;

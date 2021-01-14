@@ -3,6 +3,11 @@
     background-color: $primary;
     padding-top: $logoSize *2;
 
+
+    @include breakpointPortrait(sm) {
+        min-height: 75vh;
+    }
+
     .container {
         width: 80%;
         margin: 0 auto;

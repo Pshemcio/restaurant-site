@@ -12,7 +12,11 @@
         z-index: 2;
         width: 100%;
         height: 100%;
-        background-color: $primary;
+        background-color: rgba($primary, .95);
+
+        @include breakpoint(xs) {
+            background-color: rgba($primary, .6);
+        }
     }
 
     .main-nav-list {
@@ -20,7 +24,7 @@
         top: 100%;
         left: 50%;
         z-index: 1;
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, -130%);
         background-color: rgba($secondary, .7);
         width: 80%;
         margin: 0 auto;
@@ -52,9 +56,14 @@
         text-align: right;
         padding: .4rem 1.5rem;
 
-        @media (orientation:landscape) {
+        @include breakpoint(xs) {
             padding: .1rem 1.5rem;
             font-size: 1.3rem;
+        }
+
+        @include breakpointPortrait(sm) {
+            padding: .6rem 1.5rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -68,7 +77,19 @@
         width: $logoSize;
         height: $logoSize;
         z-index: 2;
+
+        @include breakpoint(xs) {
+            width: $logoSize * .8;
+            height: $logoSize * .8;
+        }
+
+        @include breakpointPortrait(sm) {
+            width: $logoSize;
+            height: $logoSize;
+        }
     }
+
+
 }
 
 @keyframes opacity {

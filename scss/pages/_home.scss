@@ -8,7 +8,7 @@
         padding: 1rem 1rem 2rem;
     }
 
-    @media (orientation:landscape) {
+    @include breakpoint(xs) {
         p {
             padding: 1rem 0 2rem;
         }
@@ -17,13 +17,14 @@
 
 #main-header {
     @include bgSideMobile('../img/img-mobile/cutiepies-pizza-1-xs.jpg');
-    background-position-y: $logoSize + 1;
+    min-height: 100vh;
 
-    @media (orientation:landscape) {
+    @include breakpoint(xs) {
         @include bgSideDesktop('../img/img-desktop/cutiepies-pizza-1.jpg');
         background-position-x: -30vw;
         justify-content: flex-end;
         padding-right: 5vw;
+        padding-top: $logoSize + 1;
 
         h1,
         p {
@@ -39,14 +40,18 @@
             }
         }
     }
+
+    @include breakpointPortrait(sm) {
+        background-position-x: -110vw;
+        padding-top: 0rem;
+    }
 }
 
 #menu {
     @include bgSideMobile('../img/img-mobile/cutiepies-pizza-2-xs.jpg');
-    padding-top: 40vh;
     padding-bottom: $mainPadding;
 
-    @media (orientation:landscape) {
+    @include breakpoint(xs) {
         @include bgSideDesktop('../img/img-desktop/cutiepies-pizza-2.jpg');
         background-position-x: 10vw;
         padding-left: 5vw;
@@ -54,6 +59,10 @@
         .main-btn {
             margin: 0;
         }
+    }
+
+    @include breakpointPortrait(sm) {
+        background-position-x: -50vw;
     }
 }
 
@@ -63,7 +72,7 @@
     .img-side-section--text {
         padding: $mainPadding 0;
 
-        @media (orientation:landscape) {
+        @include breakpoint(xs) {
             padding: $mainPadding 18vw;
         }
     }
@@ -72,6 +81,10 @@
 #pizza-break {
     background-image: url(../img/img-desktop/cheese-background.jpg);
     height: 40vh;
+
+    @include breakpointPortrait(sm) {
+        height: 25vh;
+    }
 }
 
 #drink-menu {
@@ -81,7 +94,7 @@
     padding: $mainPadding 0;
     padding-bottom: 45vh;
 
-    @media (orientation:landscape) {
+    @include breakpoint(xs) {
         @include bgSideDesktop('../img/img-desktop/cutiepies-drinks.jpg');
         background-size: 200%;
         background-position: left;
@@ -96,6 +109,10 @@
         .main-btn {
             margin: 0;
         }
+    }
+
+    @include breakpointPortrait(sm) {
+        min-height: 80vh;
     }
 }
 
@@ -119,7 +136,7 @@
         padding: $mainPadding 0;
         background-color: $secondary;
 
-        @media (orientation:landscape) {
+        @include breakpoint(xs) {
             padding: $mainPadding 18vw;
         }
     }
@@ -130,7 +147,7 @@
         padding: $mainPadding 1rem;
         background-color: $tertiaryLight;
 
-        @media (orientation:landscape) {
+        @include breakpoint(xs) {
             padding: $mainPadding 14vw;
         }
     }

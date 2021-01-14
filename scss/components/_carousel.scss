@@ -54,7 +54,7 @@
             height: calc(100vw);
             width: calc(100vw);
 
-            @include breakpoint(sm) {
+            @include breakpoint(xs) {
                 height: 50vw;
                 width: 50vw;
             }
@@ -67,7 +67,7 @@
     }
 }
 
-@include breakpoint(sm) {
+@include breakpoint(xs) {
     :root {
         --carousel-quantity: 2;
     }
