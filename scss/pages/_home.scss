@@ -15,6 +15,96 @@
     }
 }
 
+.img-side-section {
+    &--text {
+        padding: $mainPadding 1rem;
+
+        @include breakpointPortrait(md) {
+            height: 45vh;
+        }
+    }
+
+    @include breakpoint(xs) {
+        &--text {
+            padding: $mainPadding 15vw;
+        }
+    }
+
+    @include breakpoint(md) {
+        display: flex;
+        height: 60vh;
+
+        &--text {
+            height: 100%;
+            padding: $mainPadding;
+            display: grid;
+            place-items: center;
+        }
+
+        &--image {
+            flex-basis: 50%;
+            flex-shrink: 0;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include breakpoint(lg) {
+        height: 70vh;
+
+        &--image {
+            flex-basis: 56%;
+        }
+    }
+}
+
+.img-side-right {
+    .img-side-section {
+        @include breakpoint(md) {
+            &--text {
+                & * {
+                    text-align: right;
+                }
+
+                .main-btn {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        @include breakpoint(lg) {
+            &--text {
+                padding: 0 5vw 0 10vw;
+            }
+        }
+    }
+}
+
+.img-side-left {
+    .img-side-section {
+        @include breakpoint(md) {
+            &--text {
+                & * {
+                    text-align: left;
+                }
+
+                .main-btn {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        @include breakpoint(lg) {
+            &--text {
+                padding: 0 10vw 0 5vw;
+            }
+        }
+    }
+}
+
 #main-header {
     @include bgSideMobile('../img/img-mobile/cutiepies-pizza-1-xs.jpg');
     min-height: 100vh;
@@ -45,6 +135,14 @@
         background-position-x: -110vw;
         padding-top: 0rem;
     }
+
+    @include breakpointPortrait(md) {
+        background-position-x: -95vw;
+    }
+
+    @include breakpoint(lg) {
+        background-position-x: left;
+    }
 }
 
 #menu {
@@ -64,18 +162,18 @@
     @include breakpointPortrait(sm) {
         background-position-x: -50vw;
     }
+
+    @include breakpoint(md) {
+        background-position-x: center;
+    }
+
+    @include breakpointPortrait(md) {
+        background-position-x: 40%;
+    }
 }
 
 #reservation {
     background-color: $tertiaryLight;
-
-    .img-side-section--text {
-        padding: $mainPadding 0;
-
-        @include breakpoint(xs) {
-            padding: $mainPadding 18vw;
-        }
-    }
 }
 
 #pizza-break {
@@ -84,6 +182,10 @@
 
     @include breakpointPortrait(sm) {
         height: 25vh;
+    }
+
+    @include breakpoint(md) {
+        height: 30vh;
     }
 }
 
@@ -99,7 +201,10 @@
         background-size: 200%;
         background-position: left;
         padding: $mainPadding;
-        padding-right: 40vw;
+
+        .bg-side-inner {
+            width: 60%;
+        }
 
         h2,
         p {
@@ -112,7 +217,28 @@
     }
 
     @include breakpointPortrait(sm) {
-        min-height: 80vh;
+        height: 80vh;
+    }
+
+    @include breakpoint(md) {
+        background-size: cover;
+        background-position: left;
+
+        .bg-side-inner {
+            width: 40%;
+        }
+    }
+
+    @include breakpoint(lg) {
+        padding-left: 6vw;
+
+        .bg-side-inner {
+            width: 28%;
+        }
+
+        h2 {
+            font-size: 50px;
+        }
     }
 }
 
@@ -128,27 +254,59 @@
         font-size: 1.3rem;
         font-family: Factoria-Bold;
         margin: 1rem 0;
+
+        @include breakpoint(md) {
+            margin-top: 0;
+        }
+    }
+
+    @include breakpoint(md) {
+        .happy-hours--inner {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 1px solid $tertiaryLight;
+
+            &>* {
+                padding: 0 2rem;
+                margin: 2rem 0;
+                flex-basis: 50%;
+            }
+
+            .happy-hours-info {
+                border-left: 2px solid $secondary;
+
+                &>* {
+                    text-align: left;
+                }
+            }
+        }
     }
 }
 
 #parties {
-    .img-side-section--text {
-        padding: $mainPadding 0;
-        background-color: $secondary;
+    .img-side-section {
+        &--text {
+            background-color: $secondary;
+        }
 
-        @include breakpoint(xs) {
-            padding: $mainPadding 18vw;
+        @include breakpoint(md) {
+            flex-direction: row-reverse;
         }
     }
 }
 
 #about-us {
-    .img-side-section--text {
-        padding: $mainPadding 1rem;
-        background-color: $tertiaryLight;
+    .img-side-section {
+        &--text {
+            background-color: $tertiaryLight;
 
-        @include breakpoint(xs) {
-            padding: $mainPadding 14vw;
+
+            @include breakpoint(lg) {
+                padding: 0 5vw;
+            }
         }
     }
 }

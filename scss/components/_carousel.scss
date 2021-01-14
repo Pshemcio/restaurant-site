@@ -54,7 +54,7 @@
             height: calc(100vw);
             width: calc(100vw);
 
-            @include breakpoint(xs) {
+            @include breakpoint(sm) {
                 height: 50vw;
                 width: 50vw;
             }
@@ -63,11 +63,21 @@
                 height: calc(100vw/3);
                 width: calc(100vw/3);
             }
+
+            @include breakpoint(xl) {
+                height: calc(100vw/4);
+                width: calc(100vw/4);
+            }
+
+            @include breakpoint(3000px) {
+                height: calc(100vw/5);
+                width: calc(100vw/5);
+            }
         }
     }
 }
 
-@include breakpoint(xs) {
+@include breakpoint(sm) {
     :root {
         --carousel-quantity: 2;
     }
@@ -76,5 +86,17 @@
 @include breakpoint(lg) {
     :root {
         --carousel-quantity: 3;
+    }
+}
+
+@include breakpoint(xl) {
+    :root {
+        --carousel-quantity: 4;
+    }
+}
+
+@include breakpoint(3000px) {
+    :root {
+        --carousel-quantity: 5;
     }
 }

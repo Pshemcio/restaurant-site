@@ -74,10 +74,18 @@ h2 {
 
 .heading-m {
     font-size: 2.75rem; //44px
+
+    @include breakpoint(lg) {
+        font-size: 3.1rem; //50px
+    }
 }
 
 .heading-s {
     font-size: 2.63rem; //42px
+
+    @include breakpoint(lg) {
+        font-size: 3.1rem; //50px
+    }
 }
 
 .paragraph-l,

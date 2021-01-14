@@ -1,14 +1,13 @@
 @import 'settings/fonts';
-@import 'settings/variables';
 @import 'settings/breakpoints';
-@import 'settings/base';
+@import 'settings/variables';
 @import 'settings/mixins';
+@import 'settings/base';
 
 @import 'components/buttons';
 @import 'components/carousel';
 
 @import 'layout/navigation';
-@import 'layout/grid';
 @import 'layout/footer';
 @import 'layout/forms';
 

@@ -40,11 +40,6 @@
     transition: transform .5s;
     z-index: 2;
 
-    @include breakpoint(xs) {
-        height: $burgerBtnSize * .8;
-        width: $burgerBtnSize * .8;
-    }
-
     .burger-btn--inner,
     &::before,
     &::after {
@@ -71,5 +66,14 @@
     &::after {
         top: 75%;
         transform-origin: right;
+    }
+
+    @include breakpoint(xs) {
+        height: $burgerBtnSize * .8;
+        width: $burgerBtnSize * .8;
+    }
+
+    @include breakpoint(md) {
+        display: none;
     }
 }

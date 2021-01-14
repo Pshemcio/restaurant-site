@@ -1,11 +1,38 @@
 #main-footer {
-    padding: 2rem;
+    padding: $mainPadding;
     background-color: $primary;
+
+    @include breakpoint(md) {
+        padding-bottom: 1rem;
+    }
+
+    @include breakpoint(lg) {
+        padding-top: $mainPadding * 2;
+    }
 
     a,
     p {
         color: $secondary;
         text-align: left;
+    }
+
+    .info-container {
+        @include breakpoint(md) {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &>* {
+                flex-grow: 1;
+            }
+
+            .opening-info {
+                border-left: 1px solid $secondary;
+                padding-left: 4rem;
+            }
+        }
     }
 
     .contact-info,
@@ -29,6 +56,15 @@
         small>a {
             color: #666;
         }
+
+        @include breakpoint(md) {
+            display: flex;
+            width: 80%;
+            margin: 0 auto;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     .socials {
@@ -37,6 +73,14 @@
 
         .github {
             margin-right: 4rem;
+        }
+
+        @include breakpoint(md) {
+            padding-bottom: 0;
+
+            .github {
+                margin-right: 1rem;
+            }
         }
     }
 }

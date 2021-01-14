@@ -8,11 +8,19 @@
     h3 {
         font-size: 1.38rem;
         font-family: Factoria-Bold;
+
+        @include breakpointPortrait(md) {
+            font-size: 1.13rem;
+        }
     }
 
     p {
         font-size: 1.13rem;
         font-family: Factoria-Medium;
+
+        @include breakpointPortrait(md) {
+            font-size: 1rem;
+        }
     }
 
     .custom-pizza-menu--list,
@@ -23,7 +31,8 @@
         }
     }
 
-    .custom-pizza-menu--container {
+
+    .custom-pizza-menu--wrapper {
         padding: 0 1.3rem;
 
         .custom-pizza--category {
@@ -33,6 +42,47 @@
             text-transform: capitalize;
             margin-bottom: 1.2rem;
         }
+
+        @include breakpointPortrait(sm) {
+            padding: $mainPadding 0 $mainPadding($mainPadding*2);
+        }
+
+        @include breakpoint(md) {
+            padding: 3rem 7vw;
+            display: flex;
+            justify-content: space-between;
+
+            .custom-pizza-menu--container {
+                &:not(:last-of-type) {
+                    border-right: 2px solid $tertiaryLight;
+                    margin-right: 2rem;
+                    flex-basis: 40%;
+                }
+
+                &:last-of-type {
+                    flex-basis: 20%;
+                }
+            }
+        }
+
+        @include breakpoint(lg) {
+            .custom-pizza-menu--container {
+                &:not(:last-of-type) {
+                    margin-right: 6rem;
+                }
+            }
+        }
+
+        @include breakpointPortrait(md) {
+            padding: 2rem 3vw;
+
+            .custom-pizza-menu--container {
+                &:not(:last-of-type) {
+                    border-right: none;
+                    margin-right: 1rem;
+                }
+            }
+        }
     }
 
     .custom-pizza-menu--side {
@@ -40,7 +90,6 @@
         font-family: Factoria-Bold;
         text-align: center;
         padding: ($mainPadding/2) $mainPadding $mainPadding;
-        border-top: 1px solid $tertiaryLight;
     }
 
     .custom-pizza-menu--list {
@@ -78,10 +127,6 @@
         font-family: Factoria-Medium;
     }
 
-    .main-pizza-menu--vegan-info {
-        padding: $mainPadding ($mainPadding/2) 0;
-    }
-
     .custom-pizza-menu--heading {
         font-size: 2.55rem; //42px
     }
@@ -90,15 +135,53 @@
         &:nth-of-type(odd) {
             background-color: $primaryLight;
         }
+
+        @include breakpoint(md) {
+            display: flex;
+            align-items: center;
+
+            &:first-of-type {
+                padding-top: $logoSize;
+            }
+
+            .main-menu--img-wrap {
+                flex-shrink: 0;
+                flex-basis: 40%;
+            }
+        }
+
+        @include breakpoint(lg) {
+            .menu-side-photo--list {
+                padding-left: 10vw;
+            }
+        }
     }
 
     .menu-side-photo--list,
     .main-pizza-menu--container {
         padding: $mainPadding ($mainPadding/2);
+
+        @include breakpointPortrait(sm) {
+            padding: $mainPadding ($mainPadding*2);
+        }
+    }
+
+    .main-pizza-menu--vegan-info {
+        padding: $mainPadding ($mainPadding*2) 0;
     }
 
     .main-pizza-menu--container {
         padding-top: 0;
+
+        @include breakpoint(md) {
+            padding: 3rem 7vw;
+            display: flex;
+            justify-content: space-between;
+
+            .main-pizza-menu--list {
+                flex-basis: 31%;
+            }
+        }
     }
 
     .main-item:not(:last-of-type),
