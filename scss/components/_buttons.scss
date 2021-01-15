@@ -35,10 +35,11 @@
 
 .burger-btn {
     position: relative;
-    height: $burgerBtnSize;
-    width: $burgerBtnSize;
+    height: var(--logo-size);
+    width: var(--logo-size);
     transition: transform .5s;
     z-index: 2;
+    cursor: pointer;
 
     .burger-btn--inner,
     &::before,
@@ -66,11 +67,6 @@
     &::after {
         top: 75%;
         transform-origin: right;
-    }
-
-    @include breakpoint(xs) {
-        height: $burgerBtnSize * .8;
-        width: $burgerBtnSize * .8;
     }
 
     @include breakpoint(md) {

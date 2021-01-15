@@ -31,11 +31,25 @@
 :root {
   font-size: 16px;
   --carousel-quantity: 1;
+  --logo-size: 2.4rem;
+}
+
+@media (min-width: 512px) {
+  :root {
+    --logo-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --logo-size: 5rem;
+  }
 }
 
 @media (min-width: 992px) and (orientation: portrait) {
   :root {
     font-size: 19px;
+    --logo-size: 3rem;
   }
 }
 
@@ -55,7 +69,7 @@ body {
 }
 
 header {
-  padding-top: 3rem;
+  padding-top: var(--logo-size);
 }
 
 address {
@@ -222,13 +236,14 @@ h1 {
 
 .burger-btn {
   position: relative;
-  height: 2.2rem;
-  width: 2.2rem;
+  height: var(--logo-size);
+  width: var(--logo-size);
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
   z-index: 2;
+  cursor: pointer;
 }
 
 .burger-btn .burger-btn--inner, .burger-btn::before, .burger-btn::after {
@@ -261,13 +276,6 @@ h1 {
   top: 75%;
   -webkit-transform-origin: right;
           transform-origin: right;
-}
-
-@media (min-width: 512px) {
-  .burger-btn {
-    height: 1.76rem;
-    width: 1.76rem;
-  }
 }
 
 @media (min-width: 992px) {
@@ -345,7 +353,7 @@ h1 {
   width: calc(100vw);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 512px) {
   .carousel .carousel-items img {
     height: 50vw;
     width: 50vw;
@@ -373,7 +381,7 @@ h1 {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 512px) {
   :root {
     --carousel-quantity: 2;
   }
@@ -498,6 +506,21 @@ h1 {
   padding: 1rem 0;
 }
 
+#main-nav.menu-active .burger-btn .burger-btn--inner {
+  -webkit-transform: translate(250%, -50%) scale(0);
+          transform: translate(250%, -50%) scale(0);
+}
+
+#main-nav.menu-active .burger-btn::before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#main-nav.menu-active .burger-btn::after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
 #main-nav .main-nav-item--inner {
   display: block;
   font-size: 1.5rem;
@@ -505,8 +528,8 @@ h1 {
   color: white;
   text-align: right;
   padding: .4rem 1.5rem;
-  -webkit-transition: color .4s;
-  transition: color .4s;
+  -webkit-transition: color .4s, line-height .4s;
+  transition: color .4s, line-height .4s;
 }
 
 @media (min-width: 512px) {
@@ -529,7 +552,7 @@ h1 {
     padding: .6rem 1rem;
     font-size: 1rem;
     text-align: left;
-    line-height: 4.8rem;
+    line-height: calc(var(--logo-size));
   }
   #main-nav .main-nav-item--inner:hover, #main-nav .main-nav-item--inner:focus {
     color: #d9c7bd;
@@ -566,23 +589,11 @@ h1 {
 }
 
 #main-nav .logo {
-  width: 3rem;
-  height: 3rem;
+  width: var(--logo-size);
+  height: var(--logo-size);
   z-index: 2;
-}
-
-@media (min-width: 512px) {
-  #main-nav .logo {
-    width: 2.4rem;
-    height: 2.4rem;
-  }
-}
-
-@media (min-width: 992px) {
-  #main-nav .logo {
-    width: 4.8rem;
-    height: 4.8rem;
-  }
+  -webkit-transition: height .4s, width .4s;
+  transition: height .4s, width .4s;
 }
 
 #main-nav .active {
@@ -736,7 +747,7 @@ h1 {
 }
 
 .form-wrap .container {
-  padding: 3rem 10vw;
+  padding: var(--logo-size) 10vw;
 }
 
 @media (min-width: 992px) {
@@ -747,7 +758,7 @@ h1 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 4.5rem 5vw 0;
+    padding: calc(var(--logo-size) * 1.5) 5vw 0;
   }
   .form-wrap .container form {
     -ms-flex-preferred-size: 70%;
@@ -763,7 +774,7 @@ h1 {
 
 @media (min-width: 1200px) {
   .form-wrap .container {
-    padding: 6rem 10vw 0;
+    padding: calc(var(--logo-size) * 2) 10vw 0;
   }
   .form-wrap .container form {
     -ms-flex-preferred-size: 62%;
@@ -773,7 +784,7 @@ h1 {
 
 @media (min-width: 992px) and (orientation: portrait) {
   .form-wrap .container {
-    padding: 9rem 6vw;
+    padding: calc(var(--logo-size) * 3) 6vw;
   }
   .form-wrap .container form {
     -ms-flex-preferred-size: 635%;
@@ -1020,7 +1031,7 @@ h1 {
         -ms-flex-pack: end;
             justify-content: flex-end;
     padding-right: 5vw;
-    padding-top: 4rem;
+    padding-top: calc(var(--logo-size) + 1);
   }
   #main-header h1,
   #main-header p {
@@ -1413,7 +1424,7 @@ h1 {
             align-items: center;
   }
   #menu-wrap .main-menu--side-photo:first-of-type {
-    padding-top: 3rem;
+    padding-top: var(--logo-size);
   }
   #menu-wrap .main-menu--side-photo .main-menu--img-wrap {
     -ms-flex-negative: 0;

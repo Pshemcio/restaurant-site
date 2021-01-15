@@ -66,6 +66,20 @@
             transform: translate(-50%, 0);
             padding: 1rem 0;
         }
+
+        .burger-btn {
+            .burger-btn--inner {
+                transform: translate(250%, -50%) scale(0);
+            }
+
+            &::before {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
     }
 
     .main-nav-item--inner {
@@ -75,7 +89,8 @@
         color: white;
         text-align: right;
         padding: .4rem 1.5rem;
-        transition: color .4s;
+        transition: color .4s, line-height .4s;
+
 
         @include breakpoint(xs) {
             padding: .1rem 1.5rem;
@@ -92,7 +107,7 @@
             padding: .6rem 1rem;
             font-size: 1rem;
             text-align: left;
-            line-height: $logoSize *1.6;
+            line-height: calc(var(--logo-size));
 
             &:hover,
             &:focus {
@@ -136,24 +151,18 @@
     }
 
     .logo {
-        width: $logoSize;
-        height: $logoSize;
+        width: var(--logo-size);
+        height: var(--logo-size);
         z-index: 2;
 
-        @include breakpoint(xs) {
-            width: $logoSize * .8;
-            height: $logoSize * .8;
-        }
-
-        @include breakpoint(md) {
-            width: $logoSize *1.6;
-            height: $logoSize *1.6;
-        }
+        transition: height .4s, width .4s;
     }
 
     .active {
         color: $secondaryLight;
     }
+
+
 }
 
 @keyframes opacity {

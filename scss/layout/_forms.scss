@@ -2,12 +2,12 @@
     background-color: $primary;
 
     .container {
-        padding: $logoSize 10vw;
+        padding: var(--logo-size) 10vw;
 
         @include breakpoint(md) {
             display: flex;
             justify-content: space-between;
-            padding: $logoSize * 1.5 5vw 0;
+            padding: calc(var(--logo-size) * 1.5) 5vw 0;
 
             form {
                 flex-basis: 70%;
@@ -21,7 +21,7 @@
         }
 
         @include breakpoint(lg) {
-            padding: $logoSize * 2 10vw 0;
+            padding: calc(var(--logo-size) * 2) 10vw 0;
 
             form {
                 flex-basis: 62%;
@@ -29,7 +29,7 @@
         }
 
         @include breakpointPortrait(md) {
-            padding: $logoSize * 3 6vw;
+            padding: calc(var(--logo-size) * 3) 6vw;
 
             form {
                 flex-basis: 635%;
