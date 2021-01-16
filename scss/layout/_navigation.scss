@@ -91,6 +91,10 @@
         padding: .4rem 1.5rem;
         transition: color .4s, line-height .4s;
 
+        &:hover,
+        &:focus {
+            color: $secondaryLight;
+        }
 
         @include breakpoint(xs) {
             padding: .1rem 1.5rem;
@@ -108,11 +112,6 @@
             font-size: 1rem;
             text-align: left;
             line-height: calc(var(--logo-size));
-
-            &:hover,
-            &:focus {
-                color: $secondaryLight;
-            }
         }
     }
 

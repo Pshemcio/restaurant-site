@@ -66,11 +66,11 @@
         input,
         textarea {
             outline: none;
-            font-family: Factoria-Medium;
+            font-family: Factoria-Bold;
             background-color: transparent;
             border: 2px solid $tertiary;
             padding: .9rem;
-            color: $tertiaryLight;
+            color: $tertiary;
             font-size: 1rem;
 
             &:focus {
@@ -81,6 +81,10 @@
         input {
             flex-basis: 100%;
             margin-bottom: .8rem;
+
+            &:-webkit-autofill {
+                transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+            }
 
             @include breakpoint(xs) {
                 flex-basis: 48%;
@@ -114,6 +118,7 @@
         textarea::placeholder {
             text-transform: capitalize;
             color: $tertiary;
+            font-family: Factoria-Book;
         }
     }
 }

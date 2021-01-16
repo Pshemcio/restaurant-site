@@ -532,6 +532,10 @@ h1 {
   transition: color .4s, line-height .4s;
 }
 
+#main-nav .main-nav-item--inner:hover, #main-nav .main-nav-item--inner:focus {
+  color: #d9c7bd;
+}
+
 @media (min-width: 512px) {
   #main-nav .main-nav-item--inner {
     padding: .1rem 1.5rem;
@@ -553,9 +557,6 @@ h1 {
     font-size: 1rem;
     text-align: left;
     line-height: calc(var(--logo-size));
-  }
-  #main-nav .main-nav-item--inner:hover, #main-nav .main-nav-item--inner:focus {
-    color: #d9c7bd;
   }
 }
 
@@ -832,11 +833,11 @@ h1 {
 .form-wrap form input,
 .form-wrap form textarea {
   outline: none;
-  font-family: Factoria-Medium;
+  font-family: Factoria-Bold;
   background-color: transparent;
   border: 2px solid #657575;
   padding: .9rem;
-  color: #677576;
+  color: #657575;
   font-size: 1rem;
 }
 
@@ -849,6 +850,11 @@ h1 {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: .8rem;
+}
+
+.form-wrap form input:-webkit-autofill {
+  -webkit-transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s;
 }
 
 @media (min-width: 512px) {
@@ -887,24 +893,28 @@ h1 {
 .form-wrap form textarea::-webkit-input-placeholder {
   text-transform: capitalize;
   color: #657575;
+  font-family: Factoria-Book;
 }
 
 .form-wrap form input:-ms-input-placeholder,
 .form-wrap form textarea:-ms-input-placeholder {
   text-transform: capitalize;
   color: #657575;
+  font-family: Factoria-Book;
 }
 
 .form-wrap form input::-ms-input-placeholder,
 .form-wrap form textarea::-ms-input-placeholder {
   text-transform: capitalize;
   color: #657575;
+  font-family: Factoria-Book;
 }
 
 .form-wrap form input::placeholder,
 .form-wrap form textarea::placeholder {
   text-transform: capitalize;
   color: #657575;
+  font-family: Factoria-Book;
 }
 
 .home-wrap {
