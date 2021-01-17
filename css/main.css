@@ -69,7 +69,7 @@ body {
 }
 
 header {
-  padding-top: var(--logo-size);
+  padding-top: 4rem;
 }
 
 address {
@@ -748,7 +748,7 @@ h1 {
 }
 
 .form-wrap .container {
-  padding: var(--logo-size) 10vw;
+  padding: 3rem 10vw;
 }
 
 @media (min-width: 992px) {
@@ -759,7 +759,7 @@ h1 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: calc(var(--logo-size) * 1.5) 5vw 0;
+    padding: 5rem 5vw 0;
   }
   .form-wrap .container form {
     -ms-flex-preferred-size: 70%;
@@ -775,7 +775,7 @@ h1 {
 
 @media (min-width: 1200px) {
   .form-wrap .container {
-    padding: calc(var(--logo-size) * 2) 10vw 0;
+    padding: 7rem 10vw 0;
   }
   .form-wrap .container form {
     -ms-flex-preferred-size: 62%;
@@ -785,7 +785,7 @@ h1 {
 
 @media (min-width: 992px) and (orientation: portrait) {
   .form-wrap .container {
-    padding: calc(var(--logo-size) * 3) 6vw;
+    padding: 10rem 6vw;
   }
   .form-wrap .container form {
     -ms-flex-preferred-size: 635%;

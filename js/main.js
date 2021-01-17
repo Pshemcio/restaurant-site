@@ -51,6 +51,10 @@ const getElementYOffset = (element) => {
 };
 
 const parallaxEffect = (section) => {
+    if (section === null) {
+        return;
+    }
+
     const parallaxInitialScroll = section.getBoundingClientRect().top - window.outerHeight;
     const parallaxFinishScroll = section.getBoundingClientRect().bottom;
     const test = getElementYOffset(section) - window.outerHeight;
