@@ -1,8 +1,6 @@
 # restaurant-site
 
-Fake restaurant website with layout and content taken form [here](https://www.cutiepiespizza.com/). Form submission via [Formspree](https://formspree.io/). 
-
-Site under construction. :)
+Fake restaurant website with layout and content taken form [here](https://www.cutiepiespizza.com/).
 
 ## See it live on Github Pages:
 https://pshemcio.github.io/restaurant-site/
